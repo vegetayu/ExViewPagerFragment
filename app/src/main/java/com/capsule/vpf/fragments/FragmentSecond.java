@@ -1,7 +1,6 @@
-package com.capsule.vpf;
+package com.capsule.vpf.fragments;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import com.capsule.vpf.R;
 
 /**
  * Created by Administrator on 2017/11/28.

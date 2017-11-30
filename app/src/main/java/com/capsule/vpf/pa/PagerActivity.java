@@ -1,14 +1,18 @@
-package com.capsule.vpf;
+package com.capsule.vpf.pa;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import com.capsule.vpf.R;
+import com.capsule.vpf.fragments.FragmentFirst;
+import com.capsule.vpf.fragments.FragmentSecond;
+import com.capsule.vpf.fragments.FragmentThird;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class PagerActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private List<Fragment> fragments = new ArrayList<>();
@@ -26,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         fragments.add(fragment_second);
         fragments.add(fragment_third);
 
-        MainAdapter adapter = new MainAdapter(getSupportFragmentManager());
+        PagerAdap adapter = new PagerAdap(getSupportFragmentManager());
         adapter.setList(fragments);
 
         viewPager.setAdapter(adapter);

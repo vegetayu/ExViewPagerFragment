@@ -1,4 +1,4 @@
-package com.capsule.vpf;
+package com.capsule.vpf.pa;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,7 +10,7 @@ import java.util.List;
  * Created by Administrator on 2017/11/28.
  */
 
-public class MainAdapter extends FragmentPagerAdapter {
+public class PagerAdap extends FragmentPagerAdapter {
 
     private List<Fragment> list = new ArrayList<>();
 
@@ -18,7 +18,7 @@ public class MainAdapter extends FragmentPagerAdapter {
         this.list = list;
     }
 
-    public MainAdapter(FragmentManager fm) {
+    public PagerAdap(FragmentManager fm) {
         super(fm);
     }
 
