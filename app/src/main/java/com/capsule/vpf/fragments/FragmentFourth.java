@@ -13,15 +13,15 @@ import com.capsule.vpf.R;
  * Created by Administrator on 2017/11/28.
  */
 
-public class FragmentFouth extends Fragment {
+public class FragmentFourth extends Fragment {
 
     private TextView tvDescription;
     private Fragment child_1;
     private Fragment child_2;
 
-    public static FragmentFouth newInstance() {
+    public static FragmentFourth newInstance() {
         Bundle args = new Bundle();
-        FragmentFouth fragment = new FragmentFouth();
+        FragmentFourth fragment = new FragmentFourth();
         fragment.setArguments(args);
         return fragment;
     }
@@ -41,7 +41,7 @@ public class FragmentFouth extends Fragment {
     @Nullable @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
         @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_fouth, container, false);
+        View view = inflater.inflate(R.layout.fragment_fourth, container, false);
         tvDescription = view.findViewById(R.id.tv_description);
         return view;
     }

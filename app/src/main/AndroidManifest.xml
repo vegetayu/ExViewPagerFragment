@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".pa.PagerActivity">
+        <activity android:name=".fp.FPActivity">
 
         </activity>
         <activity android:name=".index.IndexActivity">
@@ -19,6 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".fsp.FSPActivity" />
+        <activity android:name=".frag.FragActivity" />
+        <activity android:name=".pager.PagerActivity" />
     </application>
 
 </manifest>

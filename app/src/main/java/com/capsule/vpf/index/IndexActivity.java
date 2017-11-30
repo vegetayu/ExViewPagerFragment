@@ -1,13 +1,16 @@
 package com.capsule.vpf.index;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.MotionEvent;
 import com.capsule.vpf.R;
+import com.capsule.vpf.fp.FPActivity;
+import com.capsule.vpf.frag.FragActivity;
+import com.capsule.vpf.fsp.FSPActivity;
+import com.capsule.vpf.pager.PagerActivity;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,15 +32,26 @@ public class IndexActivity extends AppCompatActivity {
         adapter = new IndexAdapter(titles);
         adapter.setListener(new IndexAdapter.OnItemClickListener() {
             @Override public void onClick(IndexAdapter.IndexHolder holder) {
+                Intent intent = null;
                 switch (holder.tvTitle.getText().toString()) {
                     case "Fragment":
+                        intent = new Intent(IndexActivity.this, FragActivity.class);
                         break;
                     case "ViewPager":
+                        intent = new Intent(IndexActivity.this, PagerActivity.class);
                         break;
                     case "FragmentPagerAdapter":
+                        intent = new Intent(IndexActivity.this, FPActivity.class);
                         break;
                     case "FragmentPagerStateAdapter":
+                        intent = new Intent(IndexActivity.this, FSPActivity.class);
                         break;
+                    //default:
+                    //    intent = null;
+                    //    break;
+                }
+                if (null != intent) {
+                    startActivity(intent);
                 }
             }
         });
