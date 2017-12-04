@@ -97,6 +97,13 @@ public class SingleFragment extends Fragment {
 
     @Override public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
-        Logger.d("Fragment --> onHiddenChanged");
+        Logger.v("Fragment --> onHiddenChanged");
     }
+
+    @Override public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Logger.w("Fragment --> onSaveInstanceState");
+    }
+
+
 }

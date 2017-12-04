@@ -1,5 +1,6 @@
 package com.capsule.vpf.frag;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -73,8 +74,24 @@ public class FragActivity extends AppCompatActivity {
     }
 
     @Override public boolean onCreateOptionsMenu(Menu menu) {
+        Logger.v("Activity --> onCreateOptionsMenu");
         getMenuInflater().inflate(R.menu.frag_activity, menu);
         return true;
+    }
+
+    @Override protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Logger.w("Activity --> onSaveInstanceState");
+    }
+
+    @Override protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Logger.w("Activity --> onRestoreInstanceState");
+    }
+
+    @Override public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        Logger.w("Activity --> onConfigurationChanged");
     }
 
     @Override public boolean onOptionsItemSelected(MenuItem item) {
